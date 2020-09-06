@@ -1,0 +1,30 @@
+[root@ip-10-0-0-174 centos]# telnet localhost 80
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+^]
+telnet> quit
+Connection closed.
+
+
+
+
+[root@ip-10-0-0-174 centos]# telnet localhost 8080
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+^]
+telnet> quit
+Connection closed.
+
+
+
+[root@ip-10-0-0-174 centos]# telnet localhost 3306
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+J
+8.0.2bGFjT8I3▒b/o
+                 V>t
+cicaching_sha2_password
+

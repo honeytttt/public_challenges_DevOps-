@@ -1,0 +1,26 @@
+[root@ip-10-0-0-174 centos]# nslookup www.google.com
+Server:         10.0.0.2
+Address:        10.0.0.2#53
+
+Non-authoritative answer:
+Name:   www.google.com
+Address: 74.125.24.105
+Name:   www.google.com
+Address: 74.125.24.106
+Name:   www.google.com
+Address: 74.125.24.147
+Name:   www.google.com
+Address: 74.125.24.99
+Name:   www.google.com
+Address: 74.125.24.103
+Name:   www.google.com
+Address: 74.125.24.104
+Name:   www.google.com
+Address: 2404:6800:4003:c03::69
+Name:   www.google.com
+Address: 2404:6800:4003:c03::93
+Name:   www.google.com
+Address: 2404:6800:4003:c03::63
+Name:   www.google.com
+Address: 2404:6800:4003:c03::67
+
