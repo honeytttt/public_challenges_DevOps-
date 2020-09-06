@@ -5,7 +5,7 @@ resource "aws_security_group" "ecs_sg" {
         from_port       = 22
         to_port         = 22
         protocol        = "tcp"
-        cidr_blocks     = ["0.0.0.0/0"]
+        cidr_blocks     = ["116.88.36.129/32"]
     }
     ingress {
         from_port       = 80
