@@ -43,7 +43,7 @@ resource "aws_security_group" "sg_devops" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["116.88.36.129/32"]
   }
   
   ingress {
@@ -54,14 +54,6 @@ resource "aws_security_group" "sg_devops" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   
- ingress {
-    description = "Tomcat access"
-    from_port   = 8080
-    to_port     = 8080
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
   egress {
     from_port   = 0
     to_port     = 0
@@ -77,8 +69,8 @@ resource "aws_security_group" "sg_devops" {
 
 
 
-resource "aws_key_pair" "kp_devops" {
-  key_name   = "kp_devops"
+resource "aws_key_pair" "kp_devops1" {
+  key_name   = "kp_devops1"
   public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCutUr1eu9MNR005bFN9v9PyI0Hylu6vpXPlvBoRPJKE1WYKEup24FqPIcUgd1zqhiJVPZOwCR6Fn6iLE7oyE0hlby2agknIOPvLHzSumV9JnTEL4pBwQZi4MhEUnPH0J3AGPU29jEZgNnixPIR1Csywg7F2aO7LDgU4nQI/kWSKGN6qg4NYFPpBbgrfsoMup/BFKJOna25wer4Wegd5Xcv43bZCj7qbzCDM+iVBhS3e/Ei5lgqErit9r2dcMh1l2KtZpUBAuixTKswjUFWT22oodYlfZMzFIFz8qDFsgmf9BxtvD/c2VuqNq6r86hE3avupy38TvLTloxbCacDAILR"
 }
 
@@ -90,7 +82,7 @@ resource "aws_instance" "ec2_devops" {
         vpc_security_group_ids = [ "${aws_security_group.sg_devops.id}" ]
         ami     =       "ami-000792f2117324fc6"
         instance_type   = "t2.micro"
-        key_name        =       "kp_devops"
+        key_name        =       "kp_devops1"
 	subnet_id	=	 "${aws_subnet.sub_public_devops.id}" 
         associate_public_ip_address = true
 
